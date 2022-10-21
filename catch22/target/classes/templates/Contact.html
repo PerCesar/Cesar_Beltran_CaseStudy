@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+body {background-color: lightyellow;}
+h1   {color: black;}
+p    {color: darkslateblue;}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>Catch22</title>
+<link th:href ="@{/css/main.css}" rel="stylesheet">
+<link rel="stylesheet" media="screen" th:href="@{/css/main.css}"/>
+
+</head>
+<body>
+<header class="site-header"><h1>CATCH22</h1>
+</header>
+<div class="header-container">
+			<nav class="main-navigation">
+				<ul>
+					<li><a th:href="@{index}">Home</a>
+					<li><a th:href="@{Parks}">Parks</a>
+					<li><a th:href="@{Contact}">Birds</a>
+					<li><a th:href="@{Registration}">Subscribe</a>
+					<li><a th:href="@{Payment}">Payment</a>
+				</ul>
+			</nav>
+	</div>
+	  <div class="page-title">
+		  <center><h1 class="entry-title">Go get them!!</h1></center>
+		  	<main class="main">
+		<div class="page-content">
+			<div class="entry-content">
+				<center><h2>Bird Migration in New York City</h2></center>
+			  <p>Spring and Fall Migration in New York City
+New York City is situated directly in the Atlantic Flyway, the migration corridor used by birds in the spring and fall seasons. Here, NYC Parks & Recreation lists common migratory birds and where they can be found, such as the piping plovers that nest in Rockaway Beach each spring. You can also find tips on keeping migratory birds safe during their stay, like making your windows bird-safe and reporting any injured birds.</p>
+	</main>
+<center><table width="200" border="1">
+  <tbody>
+    <tr>
+      <th scope="col"><img class="img-responsive" src="../static/image/American Bittern.png" th:src="@{image/American Bittern.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/American Kestrel.png" th:src="@{image/American Kestrel.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/American Pipit.png" th:src="@{image/American Pipit.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/Barred Owl.png" th:src="@{image/Barred Owl.png}" width="300" height="" alt="" /></th>
+      
+    </tr>
+    <tr>
+      <td>&nbsp;America&nbsp; Bittern&nbsp;</td>
+      <td>&nbsp;American Krestrel&nbsp;&nbsp;</td>
+      <td>&nbsp;America Pipit&nbsp;&nbsp;</td>
+      <td>&nbsp;Barred Owl&nbsp;&nbsp;</td>
+    </tr>
+    <br>
+        <tr>
+      <th scope="col"><img class="img-responsive" src="../static/image/Belted Kingfisher.png" th:src="@{image/Belted Kingfisher.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/Black-capped Chikadee.png" th:src="@{image/Black-capped Chikadee.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/Blue Jay.png" th:src="@{image/Blue Jay.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/Blue-gray Gnatcatcher.png" th:src="@{image/Blue-gray Gnatcatcher.png}" width="300" height="" alt="" /></th>
+      
+    </tr>
+    <tr>
+      <td>&nbsp;Belted Kingfisher&nbsp;</td>
+      <td>&nbsp;Black-capped Chikadee&nbsp;&nbsp;</td>
+      <td>&nbsp;Blue Jay&nbsp;&nbsp;</td>
+      <td>&nbsp;Blue-gray Gnatcatcher&nbsp;&nbsp;</td>
+    </tr>
+    <br>
+            <tr>
+      <th scope="col"><img class="img-responsive" src="../static/image/Bobolink.png" th:src="@{image/Bobolink.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/Brown Creeper.png" th:src="@{image/Brown Creeper.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/Cedar Waxwing.png" th:src="@{image/Cedar Waxwing.png}" width="300" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/Chimney Swift.png" th:src="@{image/Chimney Swift.png}" width="300" height="" alt="" /></th>
+      
+    </tr>
+    <tr>
+      <td>&nbsp;Bobolink&nbsp;</td>
+      <td>&nbsp;Brown Creeper&nbsp;&nbsp;</td>
+      <td>&nbsp;Cedar Waxwing&nbsp;&nbsp;</td>
+      <td>&nbsp;Chimney Swift&nbsp;&nbsp;</td>
+    </tr>
+    <br>
+    
+  </tbody>
+</table></center>
+
+<br>
+<br>
+	<footer class="site-footer">
+			<center><img class="img-responsive" src="../static/image/1.png" th:src="@{image/1.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/2.png" th:src="@{image/2.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/3.png" th:src="@{image/3.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/4.png" th:src="@{image/4.png}" width="200" height="200" alt="" /></div></center>
+	</footer>
+	<br>	
+</body>
+</html>

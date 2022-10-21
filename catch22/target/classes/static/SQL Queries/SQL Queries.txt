@@ -1,0 +1,27 @@
+STATEMENT INSERTION
+#Inserting participant information according to fields
+INSERT INTO 'participants'
+VALUES 'values entered here';
+
+#Pulling participants based on zip code
+USE catch22;
+SELECT
+	city
+FROM participants
+ORDER BY postal_code
+
+
+#Pulling participants based on zip code provided according to age
+USE catch22;
+SELECT
+	state
+FROM participants
+ORDER BY birth_year
+
+#delimiting participants to specific cities
+SELECT * FROM catch22
+WHERE city IS NYC
+
+#deleting specific participants based on id number
+DELETE FROM participants
+WHERE id is #

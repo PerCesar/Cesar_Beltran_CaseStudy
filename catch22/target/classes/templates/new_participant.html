@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Catch22</title>
+<style>
+body {background-color: yellow;}
+h1   {color: black;}
+p    {color: darkslateblue;}
+</style>
+</head>
+<li><a th:href="@{index}">Home</a>
+<body>
+	<div class="container">
+	<li><a th:href="@{Payment}">Payment</a>
+		<h1>Participants Bird Watching Competition</h1>
+		<hr>
+		<h2>Enroll Participant</h2>
+
+		<form action="#" th:action="@{/saveParticipant}"
+			th:object="${participant}" method="POST">
+			
+		<input type="text" th:field="*{lastName}"
+			placeholder="Participant Last Name" class="form-control mb-4 col-4">
+		
+		<input type="text" th:field="*{firstName}"
+			placeholder="Participant First Name" class="form-control mb-4 col-4">
+
+		<input type="text" th:field="*{phoneNumber}"
+			placeholder="Participant Phone Number" class="form-control mb-4 col-4">		
+
+		<input type="text" th:field="*{homeAddress}"
+			placeholder="Participant Home Address" class="form-control mb-4 col-4">	
+
+		<input type="text" th:field="*{city}"
+			placeholder="Participant City" class="form-control mb-4 col-4">	
+
+		<input type="text" th:field="*{state}"
+			placeholder="Participant State" class="form-control mb-4 col-4">		
+
+		<input type="text" th:field="*{postalCode}"
+			placeholder="Participant Postal Code" class="form-control mb-4 col-4">	
+		
+		<input type="text" th:field="*{email}"
+			placeholder="Participant Email" class="form-control mb-4 col-4">	
+
+		<input type="text" th:field="*{birthYear}"
+			placeholder="Participant Birth Year" class="form-control mb-4 col-4">	
+			
+		<button type="submit" class="btn btn-info col-2"> Save Participant</button>
+	</form>
+	</div>
+	<br>
+	<br>
+	<footer class="site-footer">
+			<center><img class="img-responsive" src="../static/image/1.png" th:src="@{image/1.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/2.png" th:src="@{image/2.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/3.png" th:src="@{image/3.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/4.png" th:src="@{image/4.png}" width="200" height="200" alt="" /></div></center>
+	</footer>
+</body>
+</html>

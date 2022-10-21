@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: black;}
+p    {color: darkslateblue;}
+</style>
+<meta charset="ISO-8859-1">
+<title>Catch22</title>
+<link th:href ="@{/css/main.css}" rel="stylesheet">
+<link rel="stylesheet" media="screen" th:href="@{/css/main.css}"/>
+</head>
+
+<body>
+	<header class="site-header"><h1>CATCH22</h1></header>
+	
+		<div class="header-container">
+			<nav class="main-navigation">
+				<ul>
+					<li><a th:href="@{index}">Home</a>
+					<li><a th:href="@{Parks}">Parks</a>
+					<li><a th:href="@{Contact}">Birds</a>
+					<li><a th:href="@{Registration}">Subscribe</a>
+					<li><a th:href="@{Payment}">Payment</a>
+				</ul>
+			</nav>
+		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" action="file:///C|/Users/danie/Downloads/ny-bos-js-form-validation-master/ny-bos-js-form-validation-master/about.html">
+        <h1>Join our Email List</h1>
+        <div class="input-control">
+          <label for="username">Full Name</label>
+          <input id="username" name="username" type="text" />
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" />
+          <div class="error"></div>
+        </div>
+        <button id="sub" type="submit">Register</button>
+      </form>
+    </div>
+
+    <!-- <script src="./app.js"></script> -->
+  </body>
+
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+body {background-color: pink;}
+h1   {color: black;}
+p    {color: darkslateblue;}
+</style>
+<meta charset="ISO-8859-1">
+<title>Catch22</title>
+<link th:href ="@{/css/main.css}" rel="stylesheet">
+<link rel="stylesheet" media="screen" th:href="@{/css/main.css}"/>
+
+
+</head>
+
+<body>
+<header class="site-header"><h1>Catch22</h1>
+
+</header>
+		<div class="header-container">
+			<nav class="main-navigation">
+				<ul>
+					<li><a th:href="@{index}">Home</a>
+					<li><a th:href="@{Parks}">Parks</a>
+					<li><a th:href="@{Contact}">Birds</a>
+					<li><a th:href="@{Registration}">Subscribe</a>
+					<li><a th:href="@{Payment}">Payment</a>
+					
+				</ul>
+			</nav>
+		</header>
+	  <div class="page-title">
+<center><h1>Hello Bird</h1></center>
+<div style="text-align: center;">
+<img class="img-responsive" src="../static/image/Horned Grebe.png" th:src="@{image/Horned Grebe.png}" width="800" height="547" alt="" />	    </div>
+
+	    </div>
+		  
+	    <h2 class="entry-title">How does this bird watching competition works?!&nbsp; &nbsp;&nbsp;</h2>
+		  
+		  <p style="color: darkslateblue; font-size: 15px;">The name of this competition is Catch 22 Birds. It is about making "easy" money taking pictures of an exclusive list of 40 migratory birds in Brooklyn, the goal is to catch at least 20! To earn money, one must spend money! To participate, the participant must become a member and pay a $150 membership, which includes Canon/Nikon gear, binoculars, and a zoom lens in order to capture birds during this season! If the participant has their own gear, they are more than welcome to use it, and the cost for joining this competition would be $100 instead! The goal is to try to "catch" as many birds of the 40 exotic species listed in the Catch 22 bird list. The length of time for this project would be 4 weeks to catch as many of those 22 birds as possible. The final prize for whomever completes the list is $2000 dollars, if the goal becomes unfeasible and the 22 birds could not be caught, then the prize would go to whomever catches the most birds from the list. This project will accept 100 participants. </p>
+		  
+		  
+		  <p style="color: darkslateblue; font-size: 15px;">The goal is to raise funds for endangered bird species and for conservation efforts aimed at maintaining the natural environment that these parks provide to migratory species</p>
+		  
+	  </div>
+	</div>
+		<div class="container my-2">
+		<center><h1>Participants</h1></center>
+
+			<a th:href = "@{/signUpParticipantsForm}" class="btn btn-primary btn-sm mb-3">Join as a Participant!</a>
+		<table border="1" class= "table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Participants id</th>
+					<th>Participants Last Name</th>
+					<th>Participants First Name</th>
+					<th>Participants Phone Number</th>
+					<th>Participants Home Address</th>
+					<th>Participants City</th>
+					<th>Participants State</th>
+					<th>Participants Postal Code</th>
+					<th>Participants Email</th>
+					<th>Participants Birth Year</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="participants : ${listParticipants}">
+					<td th:text="${participants.id}"></td>
+					<td th:text="${participants.lastName}"></td>
+					<td th:text="${participants.firstName}"></td>
+					<td th:text="${participants.phoneNumber}"></td>
+					<td th:text="${participants.homeAddress}"></td>
+					<td th:text="${participants.city}"></td>
+					<td th:text="${participants.State}"></td>
+					<td th:text="${participants.postalCode}"></td>
+					<td th:text="${participants.email}"></td>
+					<td th:text="${participants.birthYear}"></td>
+					<td> <a th:href="@{/showFormForUpdate/{id}(id=${participants.id})}" class="btn btn-primary">Update</a>
+						 <a th:href="@{/deleteParticipant/{id}(id=${participants.id})}" class="btn btn-danger">Delete</a>
+						 </td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	<br>
+	<br>
+	<footer class="site-footer">
+			<center><img class="img-responsive" src="../static/image/1.png" th:src="@{image/1.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/2.png" th:src="@{image/2.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/3.png" th:src="@{image/3.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/4.png" th:src="@{image/4.png}" width="200" height="200" alt="" /></div></center>
+	</footer>
+	<br>
+	</div>
+</body>
+</html>
+

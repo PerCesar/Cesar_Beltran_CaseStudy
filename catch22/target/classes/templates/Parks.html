@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: black;}
+p    {color: darkslateblue;}
+</style>
+</head>
+<body>
+	
+<meta charset="utf-8">
+<title>Catch22</title>
+<link th:href ="@{/css/main.css}" rel="stylesheet"></head>
+<body>
+<header class="site-header"><h1>CATCH22</h1>
+</header>
+	
+		<div class="header-container">
+			<nav class="main-navigation">
+				<ul>
+					<li><a th:href="@{index}">Home</a>
+					<li><a th:href="@{Parks}">Parks</a>
+					<li><a th:href="@{Contact}">Birds</a>
+					<li><a th:href="@{Registration}">Subscribe</a>
+					<li><a th:href="@{Payment}">Payment</a>
+				</ul>
+		  </nav>
+</div>
+	</header>
+    <center><tr>
+      <th scope="col"><img class="img-responsive" src="../static/image/Prospect.png" th:src="@{image/Prospect.png}" width="700" height="" alt="" /></th>
+      <th scope="col"><img class="img-responsive" src="../static/image/RedHand.png" th:src="@{image/RedHand.png}" width="530" height="" alt="" /></th>   
+    </tr></center>
+
+	<main class="main">
+		<div class="page-content">
+			<div class="entry-content">
+				<h2>Bird Photography in NYC Parks</h2>
+				<p>New York City's thousands of acres of parkland and 520 miles of coastline make for the best places to capture the essence of the city's urban jungle. Whether it's your hobby, study, or profession, or if you want a great backdrop for your next tweet, snap, or post, here's a look at some of the most photogenic places in our parks and how we can help you shoot and edit your shots.</p>
+			</div>
+		</div>
+		
+	</main>
+	<br>
+	<br>
+	<footer class="site-footer">
+			<center><img class="img-responsive" src="../static/image/1.png" th:src="@{image/1.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/2.png" th:src="@{image/2.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/3.png" th:src="@{image/3.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/4.png" th:src="@{image/4.png}" width="200" height="200" alt="" /></div></center>
+	</footer>
+	<br>
+</body>
+</html>

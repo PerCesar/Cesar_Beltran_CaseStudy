@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Catch22</title>
+<style>
+body {background-color: powderblue;}
+h1   {color: black;}
+p    {color: darkslateblue;}
+</style>
+</head>
+<body>
+<li><a th:href="@{index}">Home</a>
+	<div class="container">
+		<h1>Pay to enroll in competition</h1>
+		<hr>
+		<h2>Update Payment</h2>
+
+		<form action="#" th:action="@{/updatePayment}"
+			th:object="${payment}" method="POST">
+			
+		<input type="text" th:field="*{number}"
+			placeholder="Payment Number" class="form-control mb-4 col-4">
+		
+		<input type="text" th:field="*{stateIdNumber}"
+			placeholder="Payment State Id Number}" class="form-control mb-4 col-4">
+
+		<input type="text" th:field="*{creditCardNumber}"
+			placeholder="Payment Credit Card Number" class="form-control mb-4 col-4">		
+
+		<input type="text" th:field="*{expirationDate}"
+			placeholder="Payment Expiration Date" class="form-control mb-4 col-4">	
+
+		<input type="text" th:field="*{securityCode}"
+			placeholder="Payment Security Code" class="form-control mb-4 col-4">	
+
+		<input type="text" th:field="*{paymentDate}"
+			placeholder="Payment Payment Date" class="form-control mb-4 col-4">		
+
+		<input type="text" th:field="*{amount}"
+			placeholder="Payment Amount" class="form-control mb-4 col-4">	
+		
+		<input type="text" th:field="*{participant}"
+			placeholder="Payment Participant" class="form-control mb-4 col-4">	
+
+		<button type="submit" class="btn btn-info col-2"> Update Payment</button>
+	</form>
+	</div>
+
+</body>
+</html>

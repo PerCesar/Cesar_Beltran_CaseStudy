@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Catch22</title>
+<style>
+body {background-color: lightgreen;}
+h1   {color: black;}
+p    {color: darkslateblue;}
+</style>
+</head>
+<li><a th:href="@{index}">Home</a><body>
+	<div class="container my-2">
+		<h1>Submit Payment to Participate</h1>
+
+			<a th:href = "@{/sendPaymentForm}" class="btn btn-primary btn-sm mb-3">Send Payment!</a>
+		<table border="1" class= "table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Payment Number</th>
+					<th>Payment State Id Number</th>
+					<th>Payment Credit Card Number</th>
+					<th>Payment Expiration Date</th>
+					<th>Payment Security Code</th>
+					<th>Payment Payment Date</th>
+					<th>Payment Amount</th>
+					<th>Payment Participant </th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="payment : ${listPayment}">
+					<td th:text="${payment.number}"></td>
+					<td th:text="${payment.stateIdNumber}"></td>
+					<td th:text="${payment.creditCardNumber}"></td>
+					<td th:text="${payment.expirationDate}"></td>
+					<td th:text="${payment.securityCode}"></td>
+					<td th:text="${payment.paymentDate}"></td>
+					<td th:text="${payment.amount}"></td>
+					<td th:text="${payment.participant}"></td>
+					<td> <a th:href="@{/showFormForUpdate/{id}(id=${payment.number})}" class="btn btn-primary">Update</a>
+						 <a th:href="@{/deletePaymentt/{id}(id=${payment.number})}" class="btn btn-danger">Delete</a>
+						 </td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<br>
+		<br>
+	<footer class="site-footer">
+			<center><img class="img-responsive" src="../static/image/1.png" th:src="@{image/1.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/2.png" th:src="@{image/2.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/3.png" th:src="@{image/3.png}" width="200" height="200" alt="" />,<img class="img-responsive" src="../static/image/4.png" th:src="@{image/4.png}" width="200" height="200" alt="" /></div></center>
+	</footer>
+</body>
+</html>
