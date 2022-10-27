@@ -1,6 +1,6 @@
 package com.beltran.catch22.entity;
 
-import java.util.List;
+import java.util.List; 
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -84,7 +84,7 @@ public class Participants {
 		return id;
 	}
 
-	public void setParticipantNumber(long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
